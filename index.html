@@ -170,7 +170,7 @@
             refresh()
             button1.addEventListener('click', function(){
                 counter++
-                if (counter == 27) {
+                if (counter == 28) {
                     was = [steck1[counter - 1], steck2[counter - 1], steck3[counter - 1]];
                     refresh();
                 }
@@ -180,8 +180,8 @@
                 document.getElementById("first_floor").src = "pictures/" + String(back1[counter - 1]) + ".png"
                 document.getElementById("second_floor").src = "pictures/" + String(back2[counter - 1]) + ".png"
                 document.getElementById("third_floor").src = "pictures/" + String(back3[counter - 1]) + ".png"
-                document.getElementById("demo1").innerHTML = String(27 - counter) + " cards left";
-                document.getElementById("demo1").innerHTML = String(27 - counter) + " cards left";
+                document.getElementById("demo1").innerHTML = String(28 - counter) + " cards left";
+                document.getElementById("demo1").innerHTML = String(28 - counter) + " cards left";
             });
         </script>
         
