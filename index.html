@@ -29,6 +29,42 @@
                 text-align: center;
             }
 
+            .var_2 {
+                    display: none;
+                }
+            
+            .var_2 img {
+                width: 220px;
+                height: 300px;
+            }
+
+            @media only screen and (max-device-width:1000px) and (min-device-width:600px) {
+                #cards {
+                    width: 60%;
+                }
+                #tasks {
+                    width: 40%;
+                }
+                img {
+                    width: 150px;
+                    height: 230px;
+                }
+                #submit, #random {
+                width: 17%;
+                padding: 3px;
+            }
+            }
+
+            @media only screen and (max-device-width: 600px) {
+                .var_1 {
+                    display: none;
+                }
+
+                .var_2 {
+                    display: block;
+                }
+            }
+
             #selector_1, #selector_2, #selector_3 {
                 width:20%;
                 align-items: center;
@@ -42,7 +78,12 @@
             #submitt {
                 height: 47px;
                 margin: auto;
+            }
 
+            #demo1 {
+                width:60%;
+                float: left;
+                text-align: right;
             }
 
         </style>
@@ -51,58 +92,82 @@
         <!-- задания -->
         <div id="tasks" >
             <div id="submitt">
-            <select id="selector_1">
-                <option value="1_1">Simple 1</option>
-                <option value="1_2">Simple 2</option>
-                <option value="1_3">Simple 3</option>
-                <option value="1_4">Simple 4</option>
-                <option value="1_5">Simple 5</option>
-                <option value="1_6">Simple 6</option>
-                <option value="1_7">Advanced 1</option> 
-                <option value="1_8">Advanced 2</option> 
-                <option value="1_9">Advanced 3</option> 
-                <option value="1_10">Advanced 4</option> 
-                <option value="1_11">Advanced 5</option>
-            </select>
-            <select id="selector_2">
-                <option value="2_1">Simple 1</option>
-                <option value="2_2">Simple 2</option>
-                <option value="2_3">Simple 3</option>
-                <option value="2_4">Simple 4</option>
-                <option value="2_5">Simple 5</option>
-                <option value="2_6">Simple 6</option>
-                <option value="2_7">Advanced 1</option> 
-                <option value="2_8">Advanced 2</option> 
-                <option value="2_9">Advanced 3</option> 
-                <option value="2_10">Advanced 4</option> 
-                <option value="2_11">Advanced 5</option>
-            </select>
-            <select id="selector_3">
-                <option value="3_1">Simple 1</option>
-                <option value="3_2">Simple 2</option>
-                <option value="3_3">Simple 3</option>
-                <option value="3_4">Simple 4</option>
-                <option value="3_5">Simple 5</option>
-                <option value="3_6">Simple 6</option>
-            </select>
-            <button class="btn btn-info btn-md" id="submit">Submit</button><br>
-        </div>
-            <img src="pictures/cat.png" alt="1" id="quest_1"/>
-            <img src="pictures/cat.png" alt="1" id="quest_2"/>
-            <img src="pictures/cat.png" alt="1" id="quest_3"/>
+                <select id="selector_1">
+                    <option value="1_1">Simple 1</option>
+                    <option value="1_2">Simple 2</option>
+                    <option value="1_3">Simple 3</option>
+                    <option value="1_4">Simple 4</option>
+                    <option value="1_5">Simple 5</option>
+                    <option value="1_6">Simple 6</option>
+                    <option value="1_7">Advanced 1</option> 
+                    <option value="1_8">Advanced 2</option> 
+                    <option value="1_9">Advanced 3</option> 
+                    <option value="1_10">Advanced 4</option> 
+                    <option value="1_11">Advanced 5</option>
+                </select>
+                <select id="selector_2">
+                    <option value="2_1">Simple 1</option>
+                    <option value="2_2">Simple 2</option>
+                    <option value="2_3">Simple 3</option>
+                    <option value="2_4">Simple 4</option>
+                    <option value="2_5">Simple 5</option>
+                    <option value="2_6">Simple 6</option>
+                    <option value="2_7">Advanced 1</option> 
+                    <option value="2_8">Advanced 2</option> 
+                    <option value="2_9">Advanced 3</option> 
+                    <option value="2_10">Advanced 4</option> 
+                    <option value="2_11">Advanced 5</option>
+                </select>
+                <select id="selector_3">
+                    <option value="3_1">Simple 1</option>
+                    <option value="3_2">Simple 2</option>
+                    <option value="3_3">Simple 3</option>
+                    <option value="3_4">Simple 4</option>
+                    <option value="3_5">Simple 5</option>
+                    <option value="3_6">Simple 6</option>
+                </select>
+                <button class="btn btn-info btn-md" id="submit">Submit</button>
+                <button class="btn btn-warning btn-md" id="random">Random</button><br>
+            </div>
+            <div class="var_1">
+                <img src="pictures/cat.png" alt="1" class="quest_1"/>
+                <img src="pictures/cat.png" alt="1" class="quest_2"/>
+                <img src="pictures/cat.png" alt="1" class="quest_3"/>
+            </div>
+            <div class="var_2">
+                <div style="display: block; width:50%; margin-left: auto; margin-right: auto">
+                    <img src="pictures/cat.png" alt="1" class="quest_1"/>
+                    <img src="pictures/cat.png" alt="1" class="quest_2"/>
+                    <img src="pictures/cat.png" alt="1" class="quest_3"/>
+                </div>
+            </div>
         </div>
 
+        
         <!-- карты -->
         <div id = "cards">
-            <h2 id="demo1" style="color:rgb(100, 45, 17)">26 cards left</h2>
-            <img src="pictures/cat.png" alt="1" id="first"/>
-            <img src="pictures/cat.png" alt="1" id="second"/>
-            <img src="pictures/cat.png" alt="1" id="third"/><br>
-            <img src="pictures/cat.png" alt="1" id="first_floor"/>
-            <img src="pictures/cat.png" alt="1" id="second_floor"/>
-            <img src="pictures/cat.png" alt="1" id="third_floor"/>  
-            <br>
-            <button class="btn btn-info btn-lg" id = "true">Next</button>
+            <div style="margin: 5px;">
+                <h3 id="demo1" style="color:rgb(100, 45, 17)">26 cards left</h3>
+                <div><button class="btn btn-info" id = "true">Next</button></div>
+            </div>
+            <div class="var_1">
+                <img src="pictures/cat.png" alt="1" class="first"/>
+                <img src="pictures/cat.png" alt="1" class="second"/>
+                <img src="pictures/cat.png" alt="1" class="third"/><br>
+                <img src="pictures/cat.png" alt="1" class="first_floor"/>
+                <img src="pictures/cat.png" alt="1" class="second_floor"/>
+                <img src="pictures/cat.png" alt="1" class="third_floor"/>  
+            </div>
+            <div class="var_2">
+                <div style="display: grid; width: 500px; grid-template-columns: 50% 50%;">
+                    <img src="pictures/cat.png" alt="1" class="first"/>
+                    <img src="pictures/cat.png" alt="1" class="first_floor"/>
+                    <img src="pictures/cat.png" alt="1" class="second"/>
+                    <img src="pictures/cat.png" alt="1" class="second_floor"/>
+                    <img src="pictures/cat.png" alt="1" class="third"/>
+                    <img src="pictures/cat.png" alt="1" class="third_floor"/>
+                    </div>
+            </div>
         </div>
 
         <!-- карты -->
@@ -174,23 +239,57 @@
                     was = [steck1[counter - 1], steck2[counter - 1], steck3[counter - 1]];
                     refresh();
                 }
-                document.getElementById("first").src = "pictures/" + String(steck1[counter]) + ".jpg"
-                document.getElementById("second").src = "pictures/" + String(steck2[counter]) + ".jpg"
-                document.getElementById("third").src = "pictures/" + String(steck3[counter]) + ".jpg"
-                document.getElementById("first_floor").src = "pictures/" + String(back1[counter - 1]) + ".png"
-                document.getElementById("second_floor").src = "pictures/" + String(back2[counter - 1]) + ".png"
-                document.getElementById("third_floor").src = "pictures/" + String(back3[counter - 1]) + ".png"
+                document.getElementsByClassName("first")[0].src = "pictures/" + String(steck1[counter]) + ".jpg"
+                document.getElementsByClassName("second")[0].src = "pictures/" + String(steck2[counter]) + ".jpg"
+                document.getElementsByClassName("third")[0].src = "pictures/" + String(steck3[counter]) + ".jpg"
+                document.getElementsByClassName("first_floor")[0].src = "pictures/" + String(back1[counter - 1]) + ".png"
+                document.getElementsByClassName("second_floor")[0].src = "pictures/" + String(back2[counter - 1]) + ".png"
+                document.getElementsByClassName("third_floor")[0].src = "pictures/" + String(back3[counter - 1]) + ".png"
                 document.getElementById("demo1").innerHTML = String(27 - counter) + " cards left";
                 document.getElementById("demo1").innerHTML = String(27 - counter) + " cards left";
+
+                document.getElementsByClassName("first")[1].src = "pictures/" + String(steck1[counter]) + ".jpg"
+                document.getElementsByClassName("second")[1].src = "pictures/" + String(steck2[counter]) + ".jpg"
+                document.getElementsByClassName("third")[1].src = "pictures/" + String(steck3[counter]) + ".jpg"
+                document.getElementsByClassName("first_floor")[1].src = "pictures/" + String(back1[counter - 1]) + ".png"
+                document.getElementsByClassName("second_floor")[1].src = "pictures/" + String(back2[counter - 1]) + ".png"
+                document.getElementsByClassName("third_floor")[1].src = "pictures/" + String(back3[counter - 1]) + ".png"
             });
         </script>
         
         <!-- задания -->
         <script>
+            //chosen
             document.querySelector('#submit').addEventListener('click', function(){
-                document.getElementById("quest_1").src = "pictures/" + document.getElementById("selector_1").value + ".jpg"
-                document.getElementById("quest_2").src = "pictures/" + document.getElementById("selector_2").value + ".jpg"
-                document.getElementById("quest_3").src = "pictures/" + document.getElementById("selector_3").value + ".jpg"
+                document.getElementsByClassName("quest_1")[0].src = "pictures/" + document.getElementById("selector_1").value + ".jpg"
+                document.getElementsByClassName("quest_2")[0].src = "pictures/" + document.getElementById("selector_2").value + ".jpg"
+                document.getElementsByClassName("quest_3")[0].src = "pictures/" + document.getElementById("selector_3").value + ".jpg"
+
+                document.getElementsByClassName("quest_1")[1].src = "pictures/" + document.getElementById("selector_1").value + ".jpg"
+                document.getElementsByClassName("quest_2")[1].src = "pictures/" + document.getElementById("selector_2").value + ".jpg"
+                document.getElementsByClassName("quest_3")[1].src = "pictures/" + document.getElementById("selector_3").value + ".jpg"
+            })
+            //random
+            document.querySelector('#random').addEventListener('click', function(){
+                sel_1 = ["1_1","1_2","1_3","1_4","1_5","1_6","1_7","1_8","1_9","1_10","1_11"];
+                sel_2 = ["2_1","2_2","2_3","2_4","2_5","2_6","2_7","2_8","2_9","2_10","2_11"];
+                sel_3 = ["3_1","3_2","3_3","3_4","3_5","3_6",];
+
+                random_1 = sel_1[Math.floor(Math.random() * sel_1.length)];
+                random_2 = sel_2[Math.floor(Math.random() * sel_2.length)];
+                random_3 = sel_3[Math.floor(Math.random() * sel_3.length)];
+
+                document.getElementById("selector_1").value = random_1
+                document.getElementById("selector_2").value = random_2
+                document.getElementById("selector_3").value = random_3
+                document.getElementsByClassName("quest_1")[0].src = "pictures/" + random_1 + ".jpg"
+                document.getElementsByClassName("quest_2")[0].src = "pictures/" + random_2 + ".jpg"
+                document.getElementsByClassName("quest_3")[0].src = "pictures/" + random_3 + ".jpg"
+                
+
+                document.getElementsByClassName("quest_1")[1].src = "pictures/" + random_1 + ".jpg"
+                document.getElementsByClassName("quest_2")[1].src = "pictures/" + random_2 + ".jpg"
+                document.getElementsByClassName("quest_3")[1].src = "pictures/" + random_3 + ".jpg"
             })
         </script>
     </body>
